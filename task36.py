@@ -21,6 +21,7 @@ def print_operation_table(operation,num_rows,num_columns):
     for i in range(1,num_rows+1):
         print()
         for j in range(1,num_columns+1):
-            print('{:>2}'.format(operation(i,j)), end="   ")
+           # print('{:>2}'.format(operation(i,j)), end="   ")
+            print(str(operation(i,j)).rjust(4), end="")  
 
 print_operation_table(lambda x, y: x * y,10,10)
